@@ -44,8 +44,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|reference|null: false, unique: true, foreign_key: true|
-|group_id|reference|null: false, unique: true, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
 
 ### Asociation
 -belongs_to :users
