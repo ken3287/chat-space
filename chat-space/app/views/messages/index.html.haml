@@ -2,14 +2,15 @@
 .left
   .left__userinfo
     %span.left__userinfo-name sample
-  = render partial: 'messages/index'
+  = render partial: 'messages/group'
 
 .right
   .right__group
     %p.right__group-name sampleグループ
-    %p.right__group-member samplename
+    %div.right__group-edit edit
+    %p.right__group-member sample:name
   .right__message
-    %span.right__message-name sample
-    %span.right__message-time 2018/8/04 05:11:11
-    %p.right__message-message message
-  .right__typetext
+    = render partial: 'messages/message'
+    = render partial: 'messages/message'
+    = render partial: 'messages/message'
+  .right__typemessage
