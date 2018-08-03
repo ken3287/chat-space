@@ -6,7 +6,6 @@ html,body { height:100%; }
   float: right;
   &__group {
     padding: 0 40px;
-    background-color: white;
     height: 15%;
     border: solid 1px #eeeeee;
     &-name {
@@ -57,16 +56,24 @@ html,body { height:100%; }
   }
   &__typemessage {
   height: 90px;
-  background-color: red;
+  padding-left: 40px;
     &-text {
       font-size: 16px;
       color: #434A54;
+      padding-left: 10px;
+      line-height: 90px;
     }
     &-send {
-      height: 15px;
-      width: 30px;
+      height: 50px;
+      width: 120px;
       float: right;
-      background-color: blue;
+      background-color: #38AEF0;
+      position: relative;
+      bottom:70px;
+      right: 40px;
+      line-height: 50px;
+      text-align: center;
+
     }
   }
 }
