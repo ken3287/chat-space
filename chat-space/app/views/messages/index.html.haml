@@ -1,0 +1,23 @@
+.notice
+  %p.worning-text チャットグループを作成しました。
+.left
+  .left__userinfo
+    %sapn.left__userinfo-name sample
+    .left__userinfo-icon
+      = fa_icon "pencil-square-o"
+      = fa_icon "cog"
+  = render partial: 'group'
+
+.right
+  .right__group
+    %p.right__group-name sampleグループ
+    %div.right__group-edit edit
+    %p.right__group-member sample:name
+  = render partial: 'message'
+  .right__typemessage
+    %form{class: "right__type-form"}
+      .right__typemessage--main
+        %input{placeholder: "type a message",class: "right__typemessage--main-text", type: "text"}
+        %a.right__typemessage--main-icon
+          = fa_icon "image"
+        %input.right__typemessage-send{name: "submit", type: "submit", value: "Send"}
