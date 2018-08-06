@@ -1,4 +1,4 @@
-.worning
+.notice
   %p.worning-text チャットグループを作成しました。
 .left
   .left__userinfo
@@ -16,7 +16,9 @@
   .right__message
     = render partial: 'messages/message'
   .right__typemessage
-    %p.right__typemessage-text text
-    %a.right__typemessage-icon
-      %i.fa.fa-image
-    %input.right__typemessage-send{name: "submit", type: "submit", value: "Send"}
+    %form{class: "right__type-form"}
+      .right__typemessage--main
+        %input{placeholder: "type a message",class: "right__typemessage--main-text", type: "text"}
+        %a.right__typemessage--main-icon
+          = fa_icon "image"
+        %input.right__typemessage-send{name: "submit", type: "submit", value: "Send"}
