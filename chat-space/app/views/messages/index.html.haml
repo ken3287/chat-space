@@ -1,7 +1,11 @@
-
+.worning
+  %p.worning-text チャットグループを作成しました。
 .left
   .left__userinfo
-    %span.left__userinfo-name sample
+    %sapn.left__userinfo-name sample
+    .left__userinfo-icon
+      = fa_icon "pencil-square-o"
+      = fa_icon "cog"
   = render partial: 'messages/group'
 
 .right
@@ -11,8 +15,8 @@
     %p.right__group-member sample:name
   .right__message
     = render partial: 'messages/message'
-    = render partial: 'messages/message'
-    = render partial: 'messages/message'
   .right__typemessage
-    %p.right__typemessage-text type a message
-    %div.right__typemessage-send Send
+    %p.right__typemessage-text text
+    %a.right__typemessage-icon
+      %i.fa.fa-image
+    %input.right__typemessage-send{name: "submit", type: "submit", value: "Send"}
