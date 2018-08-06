@@ -1,4 +1,4 @@
-html,body { height:100%; }
+html, body { height: 100%; }
 .left {
   width: 300px;
   height: 100%;
@@ -7,7 +7,7 @@ html,body { height:100%; }
   &__userinfo {
     height: 15%;
     background-color: #253141;
-    padding: 0  20px;
+    padding: 0 20px;
     position: relative;
     &-name {
       color: $textwhite;
@@ -16,7 +16,7 @@ html,body { height:100%; }
       padding-top: 40px;
       position: absolute;
     }
-    &-icon{
+    &-icon {
       padding-top: 40px;
       display: inline-block;
       float: left;
@@ -32,7 +32,7 @@ html,body { height:100%; }
       color: $textwhite;
       padding-top: 20px;
     }
-    &-message{
+    &-message {
       font-size: 11px;
       color: $textwhite;
       padding-top: 5px;
