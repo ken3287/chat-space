@@ -1,3 +1,10 @@
-.wrapper
-
-  = render 'messages/group'
+.left
+  .left__userinfo
+    %sapn.left__userinfo-name
+      = current_user.name
+    .left__userinfo-icon
+      = link_to new_group_path do
+        = fa_icon "pencil-square-o"
+      = link_to  edit_user_path(current_user) do
+        = fa_icon "cog"
+  = render partial: 'messages/group'
