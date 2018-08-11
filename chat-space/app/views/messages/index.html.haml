@@ -18,7 +18,9 @@
   .right__typemessage
     = form_for [@group, @message] do |f|
       .right__typemessage--main
-        = f.text_field :body, class: 'right__typemessage--main-text', placeholder: 'type a message'
+        = f.text_field :body, class: 'right__typemessage--main-text',placeholder: 'type a message'
         %a.right__typemessage--main-icon
-          = fa_icon "image"
-        %input.right__typemessage-send{name: "submit", type: "submit", value: "Send"}
+          = f.label :image,class: 'right__typemessage--main-icon' do
+            = fa_icon "image"
+            = f.file_field :image
+        = f.submit 'Send', class: 'right__typemessage-send'
