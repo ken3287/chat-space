@@ -16,9 +16,9 @@
     %p.right__group-member sample:name
   = render partial: 'message'
   .right__typemessage
-    %form{class: "right__type-form"}
+    = form_for [@group, @message] do |f|
       .right__typemessage--main
-        %input{placeholder: "type a message",class: "right__typemessage--main-text", type: "text"}
+        = f.text_field :body, class: 'right__typemessage--main-text', placeholder: 'type a message'
         %a.right__typemessage--main-icon
           = fa_icon "image"
         %input.right__typemessage-send{name: "submit", type: "submit", value: "Send"}
