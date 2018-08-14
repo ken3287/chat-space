@@ -3,7 +3,7 @@
     %sapn.left__userinfo-name
       = current_user.name
     .left__userinfo-icon
-      = link_to do
+      = link_to new_group_path do
         = fa_icon "pencil-square-o"
       = link_to  edit_user_path(current_user) do
         = fa_icon "cog"
@@ -14,11 +14,14 @@
     %p.right__group-name sampleグループ
     %div.right__group-edit edit
     %p.right__group-member sample:name
-  = render partial: 'message'
+  .right__message
+    = render @messages
   .right__typemessage
-    %form{class: "right__type-form"}
+    = form_for [@group, @message] do |f|
       .right__typemessage--main
-        %input{placeholder: "type a message",class: "right__typemessage--main-text", type: "text"}
+        = f.text_field :body, class: 'right__typemessage--main-text',placeholder: 'type a message'
         %a.right__typemessage--main-icon
-          = fa_icon "image"
-        %input.right__typemessage-send{name: "submit", type: "submit", value: "Send"}
+          = f.label :image,class: 'right__typemessage--main-icon' do
+            = fa_icon "image"
+            = f.file_field :image
+        = f.submit 'Send', class: 'right__typemessage-send'

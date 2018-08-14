@@ -1,4 +1,7 @@
 .left__groups
-  %p.left__groups-name groupname
-  %p.left__groups-message まだメッセージはありません
+  - current_user.groups.each do |group|
+    = link_to group_messages_path(group) do
+      %p.left__groups-name
+        = group.name
+      %p.left__groups-message まだメッセージはありません
 
