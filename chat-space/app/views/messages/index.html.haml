@@ -14,7 +14,8 @@
     %p.right__group-name sampleグループ
     %div.right__group-edit edit
     %p.right__group-member sample:name
-  = render @messages
+  .right__message
+    = render @messages
   .right__typemessage
     = form_for [@group, @message] do |f|
       .right__typemessage--main

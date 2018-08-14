@@ -1,9 +1,8 @@
-.right__message
-  %span.right__message-name
-    = message.user.name
-  %span.right__message-time
-    = message.created_at
-  %p.right__message-message
-    - if message.body.present?
-      = message.body
-    = image_tag message.image.url, class: 'right__message-message__image' if message.image.present?
+%span.right__message-name
+  = message.user.name
+%span.right__message-time
+  = message.created_at
+%p.right__message-message
+  - if message.body.present?
+    = message.body
+  = image_tag message.image.url, class: 'right__message-message__image' if message.image.present?
