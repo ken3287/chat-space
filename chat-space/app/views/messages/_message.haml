@@ -5,6 +5,6 @@
     = message.created_at
   .right__message__messages-message
     - if message.body.present?
-      %p.right__message__messages-message-body
+      %p.right__message__messages-message__body
         = message.body
     = image_tag message.image.url, class: 'right__message__messages-message__image' if message.image.present?

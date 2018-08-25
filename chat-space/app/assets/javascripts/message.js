@@ -1,6 +1,6 @@
 $(function() {
   function buildHTML(message) {
-    var img = message.image ? `<img src= ${message.image}>` : "";
+    var img = message.image ? `<img class="right__message__messages-message__image" src=${ message.image }>` : "";
     var html = `<div class="right__message__messages">
                   <span class="right__message__messages-name">
                     ${message.user_name}
@@ -12,9 +12,7 @@ $(function() {
                     <p class="right__message__messages-message-body">
                       ${message.body}
                     <p/>
-                  <div class="right__message__messages-message__image">
                     ${img}
-                  </div>
                   </div>
                 </div>`
     return html;
@@ -33,11 +31,12 @@ $(function() {
       contentType: false
     })
     .done(function(data) {
+      console.log(data)
       var html = buildHTML(data);
-      $('.right__message__messages').append(html)
+      $('.right__message').append(html)
       $('#new_message')[0].reset();
-      $('.right__message__messages').animate({
-        scrollBottom: $('.right__message__messages')[0].scrollHeight}, 'fast');
+      $('#form__submit').prop('disabled', false);
+      $('.right__message').animate({ scrollTop: $('.right__message')[0].scrollHeight },'slow');
       })
     .fail(function() {
       alert('');
