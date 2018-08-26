@@ -3,5 +3,6 @@
     = link_to group_messages_path(group) do
       %p.left__groups-name
         = group.name
-      %p.left__groups-message まだメッセージはありません
+      %p.left__groups-message
+        = group.show_last_message
 
