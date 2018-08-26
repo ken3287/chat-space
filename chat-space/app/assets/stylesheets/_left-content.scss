@@ -20,12 +20,15 @@ html, body { height: 100%; }
       padding-top: 40px;
       display: inline-block;
       float: left;
-      color: $textwhite;
       margin-left: 210px;
+      .fa{
+        color: white;
+      }
     }
   }
 
   &__groups {
+    overflow: scroll;
     padding: 0 20px;
     &-name {
       font-size: 15px;
