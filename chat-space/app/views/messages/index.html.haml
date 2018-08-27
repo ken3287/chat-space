@@ -13,7 +13,8 @@
   .right__group
     %p.right__group-name
       = @group.name
-    %div.right__group-edit edit
+    %div.right__group-edit
+      = link_to "Edit", edit_group_path(@group), style: "text-decoration: none;"
     %p.right__group-member
       Members:
       = current_user.name
