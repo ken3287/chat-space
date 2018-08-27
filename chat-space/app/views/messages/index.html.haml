@@ -26,5 +26,5 @@
         %a.right__typemessage--main-icon
           = f.label :image,class: 'right__typemessage--main-icon' do
             = fa_icon "image"
-            = f.file_field :image
+            = f.file_field :image, style: "display: none;"
         = f.submit 'Send', class: 'right__typemessage-send', id: 'form__submit'
