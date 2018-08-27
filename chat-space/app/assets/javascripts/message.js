@@ -31,7 +31,6 @@ $(function() {
       contentType: false
     })
     .done(function(data) {
-      console.log(data)
       var html = buildHTML(data);
       $('.right__message').append(html)
       $('#new_message')[0].reset();
